@@ -2,11 +2,12 @@
 <html>
 
 <head>
+  <title>Tech Question Editor</title>
   <script src="https://cdn.tiny.cloud/1/kkr0fvgpv52nhhi81xpf5hgrws2vcubp7r0gr3ybbaw2hj59/tinymce/5/tinymce.min.js"></script>
 </head>
 
 <body>
-  <textarea >
+  <textarea>
     Hi {client name},
     <br>Thank you for your question regarding {brief question summary}.
     <br>{response}
@@ -20,16 +21,17 @@
         "autolink code paste tinymcespellchecker link"
       ],
       menubar: false,
-      statusbar:false,
+      statusbar: false,
       toolbar: "bold link | spellchecker | code",
       paste_as_text: true,
       height: 640,
-      width: 640,
+      width: 720,
       forced_root_block: false,
       keep_styles: false,
       valid_elements: 'a[href],strong,br',
-      element_format : 'html',
-      entity_encoding : 'raw'
+      element_format: 'html',
+      entity_encoding: 'raw',
+      content_style: 'body {font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif; font-size: 16px;}'
     });
   </script>
 </body>
