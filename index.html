@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <title>Tech Question Editor</title>
@@ -7,15 +7,51 @@
   <style>
     body {
       background-color: #cfcfcf;
+      padding: 2em;
+    }
+
+    .info {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+      font-size: 13px;
+      box-shadow: 0px 5px 10px 0px rgba(95, 95, 95, 0.33);
+      background-color: #f3f3ff;
+      border: 1px solid #ccc;
+      border-bottom: none;
+      margin-bottom: 0;
+      padding: 1em;
+      width: 720px;
+      border-radius: .5em .5em 0 0;
+      box-sizing: border-box;
+      color: #666;
+    }
+
+    .icon {
+      scale: .85;
+      vertical-align: middle;
+      background-color: #cfcfcf;
+      border-radius: 5px;
+      position: relative;
+      top: -2px;
     }
 
     .tox.tox-tinymce {
-      box-shadow: 0px 5px 10px 0px rgba(95, 95, 95, 0.33)
+      box-shadow: 0px 5px 10px 0px rgba(95, 95, 95, 0.33);
+      border-radius: 0 0 .5em .5em;
     }
   </style>
 </head>
 
 <body>
+  <div class="info">
+    Compose your message in the editor and then click on the <svg width="24" height="24" role="img"
+      aria-label="Source Code" class="icon">
+      <path
+        d="M9.8 15.7c.3.3.3.8 0 1-.3.4-.9.4-1.2 0l-4.4-4.1a.8.8 0 010-1.2l4.4-4.2c.3-.3.9-.3 1.2 0 .3.3.3.8 0 1.1L6 12l3.8 3.7zM14.2 15.7c-.3.3-.3.8 0 1 .4.4.9.4 1.2 0l4.4-4.1c.3-.3.3-.9 0-1.2l-4.4-4.2a.8.8 0 00-1.2 0c-.3.3-.3.8 0 1.1L18 12l-3.8 3.7z">
+      </path>
+    </svg> button to obtain the sanitized and formatted HTML version for Jira. Pasted content will also be sanitized.
+    <a href="https://www.tiny.cloud/docs/advanced/accessibility/#keyboardshortcuts" target="_blank">Accessibility
+      Info and Keyboard Shortcuts (Opens new tab).</a>
+  </div>
   <textarea>Hi {client name},<br>Thank you for your question regarding {brief question summary}.<br>{response}<br>Please do not hesitate to reach out if you have further questions.<br>Kind Regards,<br></textarea>
   <script>
     tinymce.init({
